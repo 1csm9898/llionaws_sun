@@ -144,4 +144,4 @@ AWS_S3_REGION_NAME='ap-northeast-2'
 
 import dj_database_url
 db_from_env=dj_database_url.config(coon_max_age=500)
-BATABASES['default'].update(db_from_env)
+DATABASES['default'].update(db_from_env)
