@@ -1,0 +1,13 @@
+{%extends "home.html" %}
+{%block content%}
+<body>
+<h1>{{blog.title}}</h1>
+{{blog.writer}}
+<hr>
+{{blog.body}}<br>
+{%if blog.image %}
+<p><img src="{{blog.image.url}}" width="100" height="100"></p>
+{% endif %}
+<a href="{% url 'edit' blog.id %}">수정하기</a><br>
+<a href="{% url 'delete' blog.id %}">삭제하기</a>
+{%endblock %}
