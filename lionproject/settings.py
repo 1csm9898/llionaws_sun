@@ -23,7 +23,7 @@ import os
 SECRET_KEY = os.environ.get('SECRET_KEY','django-insecure-d%__7z1v*+fdcnrc@a0u)863lsgvyv9c5_t62%_fpp1iweoh0t' )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG','True')!='False')
+DEBUG = (os.environ.get('DEBUG','True')!='False')   #부울형이여야함
 
 ALLOWED_HOSTS = ['*']
 AUTH_USER_MODEL='account.CustomUser'
@@ -135,12 +135,6 @@ MEDIA_URL="/media/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-AWS_ACCESS_KEY_ID= os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY=os.environ.get('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME='likelionprac'
-AWS_S3_SIGNATURE_VERSION='s3v4'
-AWS_S3_REGION_NAME='ap-northeast-2'
 
 import dj_database_url
 db_from_env=dj_database_url.config(conn_max_age=500)
