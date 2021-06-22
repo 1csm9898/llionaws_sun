@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lionproject.wsgi.application'
+WSGI_APPLICATION = 'lionproject.wsgi.application'gu
 
 
 # Database
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'lionproject.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopy2',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME':os.environ.get('DB_NAME'),
         'USER':os.environ.get('DB_USER'),
         'PASSWORD':os.environ.get('DB_PASSWORD'),
