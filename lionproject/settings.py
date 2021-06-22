@@ -71,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'lionproject.wsgi.application'gu
+WSGI_APPLICATION = 'lionproject.wsgi.application'
 
 
 # Database
